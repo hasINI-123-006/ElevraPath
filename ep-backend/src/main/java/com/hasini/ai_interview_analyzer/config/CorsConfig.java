@@ -19,7 +19,9 @@ public class CorsConfig {
                 registry.addMapping("/**")
                         .allowedOrigins(
                                 "http://localhost:5173",
-                                "http://localhost:5174"
+                                "http://localhost:5174",
+                                "https://elevra-path.vercel.app",
+                                "https://elevra-path-c78etpkwl-elevrapath.vercel.app"
                         )
                         .allowedMethods("*")
                         .allowedHeaders("*");
