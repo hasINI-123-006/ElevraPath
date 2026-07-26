@@ -1,7 +1,5 @@
 # ElevraPath
 
-### AI-Powered Interview & Skill Gap Analyzer
-
 ElevraPath is a full-stack AI-powered career preparation platform that helps users analyse resumes, identify skill gaps, and practise technical, behavioural, and project-based interviews using an AI interviewer. The platform provides personalised feedback, interview history tracking, and learning recommendations to help users prepare effectively for placements.
 
 ---
@@ -12,7 +10,7 @@ ElevraPath is a full-stack AI-powered career preparation platform that helps use
 
 ---
 
-# 📸 Screenshots
+#  Screenshots
 
 > Screenshots will be added after deployment.
 
