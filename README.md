@@ -33,54 +33,45 @@ ElevraPath is a full-stack AI-powered career preparation platform that helps use
 | Coming Soon |
 ---
 
-# 📖 Overview
-
-Preparing for technical interviews often requires multiple platforms for resume analysis, mock interviews, feedback tracking, and skill assessment. ElevraPath brings these essential features together into a single AI-powered platform.
-
-The application analyses resumes against target job roles, identifies skill gaps, conducts personalised AI-driven mock interviews, evaluates candidate responses, and generates actionable learning recommendations. By maintaining interview history and performance insights, ElevraPath enables users to continuously improve their interview readiness through structured practice and feedback.
-
-The platform is designed with a modern React frontend, a Spring Boot backend, PostgreSQL for data persistence, and AI integration using the OpenRouter API.
----
-
-# ✨ Key Features
+#  Key Features
 
 -  **AI Resume Analysis**
-  - Upload PDF resumes and analyse them against a target job role.
-  - Identify technical strengths, missing skills, and improvement areas.
+   - Upload PDF resumes and analyse them against a target job role.
+   - Identify technical strengths, missing skills, and improvement areas.
 
 -  **AI-Powered Mock Interviews**
-  - Conduct personalised mock interviews based on the selected job role.
-  - Supports Technical, Behavioural, and Project-based interview modes.
-  - Configurable interview length (10, 15, or 20 questions).
+   - Conduct personalised mock interviews based on the selected job role.
+   - Supports Technical, Behavioural, and Project-based interview modes.
+   - Configurable interview length (10, 15, or 20 questions).
 
 -  **Answer Evaluation**
-  - Evaluates every response using AI.
-  - Generates:
-    - Interview Score
-    - Personalised Feedback
-    - Improved Answer Suggestions
-    - Ideal Answer Reference
+   - Evaluates every response using AI.
+   - Generates:
+     - Interview Score
+     - Personalised Feedback
+     - Improved Answer Suggestions
+     - Ideal Answer Reference
 
 -  **Skill Gap Identification**
-  - Detects missing skills by comparing resume content with the target role.
-  - Generates personalised learning recommendations.
+   - Detects missing skills by comparing resume content with the target role.
+   - Generates personalised learning recommendations.
 
 -  **Interview History**
-  - Stores previous interview sessions.
-  - View interview questions, answers, feedback, and overall performance.
+   - Stores previous interview sessions.
+   - View interview questions, answers, feedback, and overall performance.
 
 -  **Secure Authentication**
-  - Email & Password Authentication
-  - Google OAuth Login
-  - BCrypt Password Encryption
-  - Forgot Password via Email
-  - Password Reset using Secure Tokens
+   - Email & Password Authentication
+   - Google OAuth Login
+   - BCrypt Password Encryption
+   - Forgot Password via Email
+   - Password Reset using Secure Tokens
 
 -  **User Profile Management**
-  - Update profile information.
-  - Change password securely.
-  - Clear interview history.
-  - Permanently delete account.
+   - Update profile information.
+   - Change password securely.
+   - Clear interview history.
+   - Permanently delete account.
 ---
 
 #  Tech Stack
