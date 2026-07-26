@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import API, { API_BASE_URL } from "../api";
 import ConfirmModal from "./ConfirmModal";
 import AlertModal from "./AlertModal";
 import {
@@ -67,9 +67,9 @@ const saveProfile = async () => {
 
     try {
 
-        const response = await axios.put(
+        const response = await API.put(
 
-            `http://localhost:8080/user/${user.id}`,
+            `/user/${user.id}`,
 
             {
                 name: user.name,
@@ -136,8 +136,8 @@ const changePassword = async () => {
 
     try {
 
-        const response = await axios.post(
-            "http://localhost:8080/change-password",
+        const response = await API.post(
+            "/change-password",
             {
                 userId: user.id,
                 currentPassword,
@@ -178,8 +178,8 @@ const clearHistory = async () => {
 
             try {
 
-                await axios.post(
-                    "http://localhost:8080/clear-history",
+                await API.post(
+                    "/clear-history",
                     null,
                     {
                         params: {
@@ -211,8 +211,8 @@ const clearHistory = async () => {
 
     try {
 
-        await axios.post(
-            "http://localhost:8080/clear-history",
+        await API.post(
+            "/clear-history",
             null,
             {
                 params: {
@@ -253,8 +253,8 @@ const deleteAccount = async () => {
 
             try {
 
-                await axios.delete(
-                    "http://localhost:8080/delete-account",
+                await API.delete(
+                    "/delete-account",
                     {
                         params: {
                             userId: user.id
@@ -283,8 +283,8 @@ const deleteAccount = async () => {
 
     try {
 
-        await axios.delete(
-            "http://localhost:8080/delete-account",
+        await API.delete(
+            "/delete-account",
             {
                 params: {
                     userId: user.id

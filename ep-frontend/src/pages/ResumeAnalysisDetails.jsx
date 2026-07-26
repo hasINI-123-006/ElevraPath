@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import API, { API_BASE_URL } from "../api";
 
 export default function ResumeAnalysisDetails({
     resumeId,
@@ -16,8 +16,8 @@ export default function ResumeAnalysisDetails({
 
         try {
 
-            const response = await axios.get(
-                `http://localhost:8080/ai/resume-history/${resumeId}`
+            const response = await API.get(
+                `/ai/resume-history/${resumeId}`
             );
 
             setReport(response.data);

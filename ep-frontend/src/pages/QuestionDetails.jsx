@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import API, { API_BASE_URL } from "../api";
 
 export default function QuestionDetails({
     interviewId,
@@ -18,9 +18,9 @@ const loadQuestions = async () => {
 
     try {
 
-        const response = await axios.get(
+        const response = await API.get(
 
-            `http://localhost:8080/ai/history/${interviewId}`
+            `/ai/history/${interviewId}`
 
         );
 

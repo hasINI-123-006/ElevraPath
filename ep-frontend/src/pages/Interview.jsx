@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import CustomSelect from "./CustomSelect";
 import AlertModal from "../pages/AlertModal";
 import ConfirmModal from "../pages/ConfirmModal";
-import axios from "axios";
+import API, { API_BASE_URL } from "../api";
 
 export default function Interview() {
 
@@ -67,8 +67,8 @@ setLoading(true);
 
           formData.append("file", resumeFile);
 
-          const uploadResponse = await axios.post(
-            "http://localhost:8080/ai/uploadResume",
+          const uploadResponse = await API.post(
+            "/ai/uploadResume",
             formData,
             {
               headers: {
@@ -88,8 +88,8 @@ setLoading(true);
           localStorage.getItem("loggedInUser")
       );
 
-      const response = await axios.post(
-        "http://localhost:8080/ai/startInterview",
+      const response = await API.post(
+        "/ai/startInterview",
         {
             jobRole: role,
             type: type,
@@ -156,8 +156,8 @@ setLoading(true);
          .reverse()
          .find(msg => msg.type === "ai")?.text;
 
-      const response = await axios.post(
-        "http://localhost:8080/ai/answer",
+      const response = await API.post(
+        "/ai/answer",
         {
           sessionId,
           question: currentQuestion,

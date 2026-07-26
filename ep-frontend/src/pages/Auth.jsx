@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import API, { API_BASE_URL } from "../api";
 import { GoogleLogin } from "@react-oauth/google";
 import AlertModal from "../pages/AlertModal";
 import {
@@ -78,8 +78,8 @@ const handleSubmit = async () => {
         return;
       }
 
-      await axios.post(
-        "http://localhost:8080/saveUser",
+      await API.post(
+        "/saveUser",
         {
           name,
           email,
@@ -96,9 +96,10 @@ const handleSubmit = async () => {
     }
 
     else if (mode === "login") {
+        console.log("API Base URL:", API.defaults.baseURL);
 
-      const response = await axios.post(
-        "http://localhost:8080/login",
+      const response = await API.post(
+        "/login",
         {
           email,
           password
@@ -125,8 +126,8 @@ const handleSubmit = async () => {
 
     else if (mode === "forgot") {
 
-        const response = await axios.post(
-            "http://localhost:8080/forgot-password",
+        const response = await API.post(
+            "/forgot-password",
             {
                 email
             }
@@ -281,8 +282,8 @@ const handleSubmit = async () => {
 
                       try {
 
-                          const response = await axios.post(
-                              "http://localhost:8080/google-login",
+                          const response = await API.post(
+                              "/google-login",
                               {
                                   credential: credentialResponse.credential
                               }

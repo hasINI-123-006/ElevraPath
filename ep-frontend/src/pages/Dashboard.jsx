@@ -6,7 +6,7 @@ import {
   Star,
   ChevronDown
 } from "lucide-react";
-import axios from "axios";
+import API, { API_BASE_URL } from "../api";
 import { useState, useEffect } from "react";
 
 import {
@@ -36,8 +36,8 @@ export default function Dashboard({ setCurrentPage }) {
 
       if (!selectedRole) return;
 
-      axios
-        .get("http://localhost:8080/ai/skill-progress", {
+      API
+        .get("/ai/skill-progress", {
 
           params: {
             userId: user.id,
@@ -113,7 +113,7 @@ export default function Dashboard({ setCurrentPage }) {
 
         if (!user) return;
 
-        axios.get("http://localhost:8080/ai/resume-count", {
+        API.get("/ai/resume-count", {
             params: {
                 userId: user.id,
             },
@@ -128,8 +128,8 @@ export default function Dashboard({ setCurrentPage }) {
                 console.error(err);
 
             });
-        axios
-            .get("http://localhost:8080/ai/interview-count", {
+        API
+            .get("/ai/interview-count", {
                 params: {
                     userId: user.id,
                 },
@@ -138,24 +138,24 @@ export default function Dashboard({ setCurrentPage }) {
                 setInterviewCount(res.data);
             });
 
-        axios
-            .get(`http://localhost:8080/ai/skill-gap-count/${user.id}`)
+        API
+            .get(`/ai/skill-gap-count/${user.id}`)
             .then((response) => {
                 setSkillGapCount(response.data.skillGapCount);
             })
             .catch((error) => {
                 console.error(error);
             });
-        axios
-            .get(`http://localhost:8080/ai/profile-strength/${user.id}`)
+        API
+            .get(`/ai/profile-strength/${user.id}`)
             .then((response) => {
                 setProfileStrength(response.data);
             })
             .catch((error) => {
                 console.error(error);
             });
-        axios
-          .get(`http://localhost:8080/ai/roles/${user.id}`)
+        API
+          .get(`/ai/roles/${user.id}`)
           .then((res) => {
 
             setRoles(res.data);

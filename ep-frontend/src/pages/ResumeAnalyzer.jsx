@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import axios from "axios";
+import API, { API_BASE_URL } from "../api";
 
 import {
   UploadCloud,
@@ -78,8 +78,8 @@ export default function ResumeAnalyzer() {
       formData.append("jobDescription", jobDescription);
       formData.append("userId", loggedInUser.id);
 
-      const response = await axios.post(
-        "http://localhost:8080/analyze-resume",
+      const response = await API.post(
+        "/analyze-resume",
         formData,
         {
           headers: {

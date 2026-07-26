@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import API, { API_BASE_URL } from "../api";
 
     export default function History({
 
@@ -29,8 +29,8 @@ import axios from "axios";
     try {
 
       const response =
-        await axios.get(
-          "http://localhost:8080/ai/history"
+        await API.get(
+          "/ai/history"
         );
 
 
@@ -52,8 +52,8 @@ import axios from "axios";
                       localStorage.getItem("loggedInUser")
                   );
 
-                  const response = await axios.get(
-                      `http://localhost:8080/ai/resume-history/user/${loggedInUser.id}`
+                  const response = await API.get(
+                      `/ai/resume-history/user/${loggedInUser.id}`
                   );
 
           setResumeHistory(response.data);
@@ -69,8 +69,8 @@ import axios from "axios";
 
     try {
 
-      await axios.delete(
-        `http://localhost:8080/ai/history/${id}`
+      await API.delete(
+        `/ai/history/${id}`
       );
 
       loadInterviewHistory();
@@ -86,8 +86,8 @@ import axios from "axios";
 
       try {
 
-          await axios.delete(
-              `http://localhost:8080/ai/resume/history/${id}`
+          await API.delete(
+              `/ai/resume/history/${id}`
           );
 
           loadResumeHistory();
@@ -103,9 +103,9 @@ import axios from "axios";
 
       try {
 
-          const response = await axios.get(
+          const response = await API.get(
 
-              `http://localhost:8080/ai/resume/download/${id}`,
+              `/ai/resume/download/${id}`,
 
               {
                   responseType: "blob"
@@ -260,7 +260,7 @@ import axios from "axios";
                                   onClick={() => {
 
                                       window.open(
-                                          `http://localhost:8080/ai/history/download/${item.id}`,
+                                          `${API_BASE_URL}/ai/history/download/${item.id}`,
                                           "_blank"
                                       );
 

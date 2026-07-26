@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import API, { API_BASE_URL } from "../api";
 import { Eye, EyeOff } from "lucide-react";
 
 export default function ResetPassword() {
@@ -20,8 +20,8 @@ export default function ResetPassword() {
 
         try {
 
-            const res = await axios.post(
-                "http://localhost:8080/reset-password",
+            const res = await API.post(
+                "/reset-password",
                 {
                     token,
                     newPassword

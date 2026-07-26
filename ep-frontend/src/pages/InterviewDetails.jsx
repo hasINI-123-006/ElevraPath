@@ -20,8 +20,8 @@ export default function InterviewDetails({
 
     try {
 
-      const response = await axios.get(
-        `http://localhost:8080/ai/history/${interviewId}`
+      const response = await API.get(
+        `/ai/history/${interviewId}`
       );
 
       setInterview(response.data);
