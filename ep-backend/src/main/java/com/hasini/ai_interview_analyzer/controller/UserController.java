@@ -143,15 +143,21 @@ public class UserController {
     @PostMapping("/forgot-password")
     public ResponseEntity<?> forgotPassword(@RequestBody Map<String, String> request) {
 
-        String email = request.get("email");
+        try {
 
-        String result = userService.forgotPassword(email);
+            String email = request.get("email");
 
-        return ResponseEntity.ok(
-                Map.of(
-                        "message", result
-                )
-        );
+            String result = userService.forgotPassword(email);
+
+            return ResponseEntity.ok(Map.of("message", result));
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+            return ResponseEntity.badRequest()
+                    .body(Map.of("message", e.getMessage()));
+        }
     }
 
 
