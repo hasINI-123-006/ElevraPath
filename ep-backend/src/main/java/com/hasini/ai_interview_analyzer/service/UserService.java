@@ -170,7 +170,7 @@ public class UserService {
         passwordResetTokenRepository.save(resetToken);
 
         String link =
-                "http://localhost:5173/reset-password?token=" + token;
+                "https://elevra-path.vercel.app/reset-password?token=" + token;
 
         emailService.sendEmail(
                 user.getEmail(),
