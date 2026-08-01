@@ -9,32 +9,39 @@ A full-stack AI-powered career preparation platform that helps users analyse res
 
 ---
 
-## Live Demo - 🔗 [Live Demo](https://elevra-path.vercel.app)
-
+<p align="center">
+  <a href="https://elevra-path.vercel.app">
+    <img src="https://img.shields.io/badge/🔗_Live_Demo-Visit_Site-6366F1?style=flat&logoColor=white" />
+  </a>
+</p>
 
 
 ---
 
-#  Screenshots
 
-> Screenshots will be added after deployment.
+## Screenshots
 
 | Login | Dashboard |
-|--------|-----------|
-| Coming Soon | Coming Soon |
+|---|---|
+| ![Login](./Screenshots/Login.png) | ![Dashboard](./Screenshots/Dashboard1.png) |
 
-| Resume Analyzer | AI Interview |
-|-----------------|--------------|
-| Coming Soon | Coming Soon |
+| Dashboard (2) | Resume Analyzer|
+|---|---|
+| ![Dashboard](./Screenshots/Dashboard2.png) | ![Resume Analyzer](./Screenshots/Resume1.png) |
 
-| Interview Evaluation | History |
-|----------------------|---------|
-| Coming Soon | Coming Soon |
+| Resume Analysis (2) | Resume Analysis (3) |
+|---|---|
+| ![Resume Analyzer 2](./Screenshots/Resume2.png) | ![Resume Analyzer 3](./Screenshots/Resume3.png) |
 
-| Settings |
-|----------|
-| Coming Soon |
----
+| AI Interview | History |
+|---|---|
+|![AI Interview](./Screenshots/Interview.png) | ![History](./Screenshots/HistoryResume.png) |
+
+|  Interview Evaluation | Settings |
+|---|---|
+|![Interview Evaluation](./Screenshots/HistoryInterviewDetails.png)  |  ![Settings](./Screenshots/Settings.png) |
+
+
 
 #  Key Features
 
@@ -76,52 +83,19 @@ A full-stack AI-powered career preparation platform that helps users analyse res
    - Clear interview history.
    - Permanently delete account.
 ---
+## Tech Stack
 
-#  Tech Stack
+| Category | Technologies |
+|---|---|
+| **Frontend** | React.js, Vite, Tailwind CSS, Axios, React Router, Recharts, Lucide React, Google OAuth |
+| **Backend** | Spring Boot, Spring MVC, Spring Data JPA, Spring Security, Hibernate, Maven |
+| **Database** | PostgreSQL |
+| **AI Integration** | OpenRouter API (GPT-3.5 Turbo) |
+| **Auth & Security** | BCrypt, Google OAuth 2.0, Password Reset Tokens, SendGrid |
+| **File Processing** | Apache PDFBox, iText PDF |
+| **Dev Tools** | IntelliJ IDEA, VS Code, pgAdmin, Postman, Git, GitHub |
 
-### Frontend
-- React.js
-- Vite
-- Tailwind CSS
-- Axios
-- React Router
-- Recharts
-- Lucide React
-- Google OAuth (@react-oauth/google)
-
-### Backend
-- Spring Boot
-- Spring MVC
-- Spring Data JPA
-- Spring Security
-- Hibernate
-- Maven
-
-### Database
-- PostgreSQL
-
-### AI Integration
-- OpenRouter API (GPT-3.5 Turbo)
-
-### Authentication & Security
-- BCrypt Password Encoder
-- Google OAuth 2.0
-- Password Reset Token
-- SendGrid (Transactional Email API)
-
-### File Processing
-- Apache PDFBox
-- iText PDF
-
-### Development Tools
-- IntelliJ IDEA
-- VS Code
-- pgAdmin
-- Postman
-- Git
-- GitHub
 ---
-
 #  System Architecture
 
 ```text
@@ -275,7 +249,7 @@ Frontend runs at:
 http://localhost:5173
 ```
 
-- ##  Future Enhancements
+##  Future Enhancements
 
 -  Voice-based AI interviews using Speech-to-Text and Text-to-Speech.
 -  Camera-based interview mode with confidence and body-language analysis.
