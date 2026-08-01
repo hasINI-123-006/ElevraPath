@@ -132,12 +132,19 @@ public class UserController {
     public ResponseEntity<?> resetPassword(
             @RequestBody ResetPasswordRequestDTO request
     ) {
+        try {
+            String result = userService.resetPassword(request);
 
-        String result = userService.resetPassword(request);
+            return ResponseEntity.ok(
+                    Map.of("message", result)
+            );
 
-        return ResponseEntity.ok(
-                Map.of("message", result)
-        );
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            return ResponseEntity.badRequest()
+                    .body(Map.of("message", e.getMessage()));
+        }
     }
 
     @PostMapping("/forgot-password")
