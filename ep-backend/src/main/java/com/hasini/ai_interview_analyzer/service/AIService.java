@@ -1028,23 +1028,37 @@ public String callAI(String prompt) {
                         + ","
 
                         + "}";
-        String evaluationResult = callAI(evaluationPrompt);
         ObjectMapper mapper = new ObjectMapper();
 
-        evaluationResult = evaluationResult
-                .replace("```json", "")
-                .replace("```", "")
-                .trim();
+        Map<String, Object> evaluationMap = null;
+        int attempts = 0;
+        String lastRawResponse = null;
 
-        Map<String, Object> evaluationMap;
+        while (attempts < 2 && evaluationMap == null) {
+            attempts++;
+            String result = callAI(evaluationPrompt);
+            result = result.replace("```json", "").replace("```", "").trim();
+            lastRawResponse = result;
 
-        try {
-            if (evaluationResult == null || evaluationResult.isBlank()) {
-                throw new RuntimeException("Empty AI response");
+            try {
+                if (result.isBlank()) continue;
+                Map<String, Object> candidate = mapper.readValue(result, Map.class);
+
+                boolean hasAllFields = candidate.get("score") != null
+                        && candidate.get("feedback") != null
+                        && candidate.get("improvement") != null
+                        && candidate.get("idealAnswer") != null;
+
+                if (hasAllFields) {
+                    evaluationMap = candidate;
+                }
+            } catch (Exception ignored) {
+                // will retry
             }
-            evaluationMap = mapper.readValue(evaluationResult, Map.class);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        }
+
+        if (evaluationMap == null) {
+            throw new RuntimeException("AI failed to return valid evaluation after retries. Last response: " + lastRawResponse);
         }
 
         String scoreText =
