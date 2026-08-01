@@ -143,7 +143,7 @@ public class UserService {
 
         return "Password reset successfully.";
     }
-
+    @Transactional
     public String forgotPassword(String email) {
 
         Optional<User> optionalUser = userRepository.findByEmail(email);
