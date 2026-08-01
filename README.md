@@ -1,4 +1,8 @@
 # ElevraPath
+![Java](https://img.shields.io/badge/Java-21-orange)
+![React](https://img.shields.io/badge/React-Vite-blue)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5-green)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql&logoColor=white)
 
 ElevraPath is a full-stack AI-powered career preparation platform that helps users analyse resumes, identify skill gaps, and practise technical, behavioural, and project-based interviews using an AI interviewer. The platform provides personalised feedback, interview history tracking, and learning recommendations to help users prepare effectively for placements.
 
@@ -6,7 +10,7 @@ ElevraPath is a full-stack AI-powered career preparation platform that helps use
 
 ## Live Demo
 
-🚧 Deployment in progress
+🔗 [Live Demo](https://elevra-path.vercel.app)
 
 ---
 
@@ -102,7 +106,7 @@ ElevraPath is a full-stack AI-powered career preparation platform that helps use
 - BCrypt Password Encoder
 - Google OAuth 2.0
 - Password Reset Token
-- Spring Mail (SMTP)
+- SendGrid (Transactional Email API)
 
 ### File Processing
 - Apache PDFBox
@@ -155,6 +159,7 @@ ElevraPath
 │   │   ├── App.jsx
 │   │   ├── main.jsx
 │   │   └── index.css
+|   ├── vercel.json
 │   ├── package.json
 │   └── vite.config.js
 │
@@ -232,8 +237,7 @@ spring.datasource.password=YOUR_DATABASE_PASSWORD
 
 openrouter.api.key=YOUR_OPENROUTER_API_KEY
 
-spring.mail.username=YOUR_EMAIL
-spring.mail.password=YOUR_APP_PASSWORD
+sendgrid.api.key=YOUR_SENDGRID_API_KEY
 
 google.client.id=YOUR_GOOGLE_CLIENT_ID
 ```
