@@ -1,16 +1,17 @@
-# ElevraPath
-![Java](https://img.shields.io/badge/Java-21-orange)
-![React](https://img.shields.io/badge/React-Vite-blue)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5-green)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql&logoColor=white)
+<h1 align="center">ElevraPath</h1>
+<p align="center">
+A full-stack AI-powered career preparation platform that helps users analyse resumes, identify skill gaps, and practise technical, behavioural, and project-based interviews using an AI interviewer. The platform provides personalised feedback, interview history tracking, and learning recommendations to help users prepare effectively for placements.
+</p>
+<p align="center">
+<img src="https://img.shields.io/badge/Java-21-orange?logo=openjdk&logoColor=white" /> <img src="https://img.shields.io/badge/React-Vite-blue?logo=react&logoColor=white" /> <img src="https://img.shields.io/badge/Spring%20Boot-3.5-green?logo=springboot&logoColor=white" /> <img src="https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql&logoColor=white" />
+</p>
 
-ElevraPath is a full-stack AI-powered career preparation platform that helps users analyse resumes, identify skill gaps, and practise technical, behavioural, and project-based interviews using an AI interviewer. The platform provides personalised feedback, interview history tracking, and learning recommendations to help users prepare effectively for placements.
 
 ---
 
-## Live Demo
+## Live Demo - 🔗 [Live Demo](https://elevra-path.vercel.app)
 
-🔗 [Live Demo](https://elevra-path.vercel.app)
+
 
 ---
 
